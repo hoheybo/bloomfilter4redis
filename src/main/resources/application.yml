@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: TestXuanbirdComputingEndorseTextServer
+    description: 玄鸟计算平台基础数据服务
+  redis:
+      clusterNodes:
+        - 10.132.21.180:6379
+        - 10.132.21.180:6380
+        - 10.132.21.180:6381
+        - 10.132.21.180:6382
+        - 10.132.21.180:6383
+        - 10.132.21.180:6384
+      password: Liberty10
+      keyPrefix: xuanbird:prpall-test
+      maxRedirects: 20
+      connectTimeout: 30000
+      readTimeout: 20000
+
+  #unit:second
+      expireSeconds: 120
+      usePool: true
+      minIdle: 50
+      maxIdle: 50
+      maxTotal: 300
+      maxWaitMillis: 8000
+      testOnBorrow: true
+      testOnReturn: true
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 30000
+      numTestsPerEvictionRun: 10
+      minEvictableIdleTimeMillis: 60000
+      maxSessionInactiveIntervalInSeconds: 60
